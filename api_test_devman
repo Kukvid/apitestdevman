@@ -1,0 +1,13 @@
+import requests
+
+response_london = requests.get("https://wttr.in/London?MnqT&lang=en")
+response_sheremetevo = requests.get("https://wttr.in/Шереметьево?MnqT&lang=ru")
+response_cherepovec = requests.get("https://wttr.in/Череповец?MnqT&lang=ru")
+
+response_london.raise_for_status()
+response_sheremetevo.raise_for_status()
+response_cherepovec.raise_for_status()
+
+print(response_london.text)
+print(response_sheremetevo.text)
+print(response_cherepovec.text)
